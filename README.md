@@ -1,1 +1,2 @@
 # dishdock
+planning - first week 
