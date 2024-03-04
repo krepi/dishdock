@@ -1,12 +1,13 @@
 import './App.css'
 import React from "react";
+import Home from "./pages/home/Home.jsx";
 function App() {
 
 
   return (
     <>
 
-      <h1>Welcome in DishDock</h1>
+        <Home/>
 
     </>
   )
