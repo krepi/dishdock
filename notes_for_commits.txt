@@ -5,4 +5,5 @@ day 2 - planning branch merged - Joker used
 day 3 - frontend work started, react installed,
 day 4 - some research how to build this app as a microservices application
 day 5 - some research how to build this app as a microservices application
-day 6 - frontend design
+day 6 - frontend design,
+day 7 - design frontend
