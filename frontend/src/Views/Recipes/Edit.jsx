@@ -2,14 +2,17 @@ import {useState} from "react";
 
 
 const Edit = () => {
+    // dummy dane recipe, normalnie przyjda z BD
     const recipe = {
-        title:'maslo z tylka',
-        ingredients: [{name:'maslo', quantity:'2', unit:'gr'}],
-        instructions:"miesac i miesac",
+        title:'Maselo z mlekiem',
+        ingredients: [{name:'maslo', quantity:'2', unit:'gr'},{name:'mleko', quantity:'100', unit:'ml'}],
+        instructions:"miesac i miesac potem wciagac",
         ready_in_minutes:'3',
         servings:"4"
     }
     const ingredients = recipe.ingredients;
+
+    //koniec dummy danych
     const unitOptions = ['ml', 'l', 'kg', 'g', 'szt.', 'łyżka', 'łyżeczka', 'opakowanie', 'szklanka'];
 
     // const ingredients = JSON.parse(recipe.ingredients);
