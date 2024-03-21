@@ -1,13 +1,13 @@
-import mealImage from '/public/images/assets/meal.jpg';
-import mealImage1 from '/public/images/assets/dishdock1.jpg';
-import mealImage2 from '/public/images/assets/disz3.jpg';
-import mealImage3 from '/public/images/assets/dishdock2.jpg';
-import mealImage4 from '/public/images/assets/dish5.jpg';
-import member1 from '/public/images/assets/t1.jpg';
-import member2 from '/public/images/assets/t2.jpg';
-import member3 from '/public/images/assets/shanti2.jpg';
-import member4 from '/public/images/assets/joker.jpg';
-import member5 from '/public/images/assets/time.jpg';
+import mealImage from '/images/assets/meal.jpg';
+import mealImage1 from '/images/assets/dishdock1.jpg';
+import mealImage2 from '/images/assets/disz3.jpg';
+import mealImage3 from '/images/assets/dishdock2.jpg';
+import mealImage4 from '/images/assets/dish5.jpg';
+import member1 from '/images/assets/t1.jpg';
+import member2 from '/images/assets/t2.jpg';
+import member3 from '/images/assets/shanti2.jpg';
+import member4 from '/images/assets/joker.jpg';
+import member5 from '/images/assets/time.jpg';
 
 
 const WelcomeContent= () => {
