@@ -3,7 +3,7 @@ const AuthenticatedLayout = ()=>{
 
     return (
         <>
-
+            
         </>
     )
 }
