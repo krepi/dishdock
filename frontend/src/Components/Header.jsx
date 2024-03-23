@@ -20,7 +20,7 @@ export default function Header() {
                                     {/*</Link>*/}
                                 </div>
 
-                                <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex flex justify-center items-center h-full">
 
                                     <NavLink href='#' >
                                         Szukaj
