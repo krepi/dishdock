@@ -13,7 +13,7 @@ import {DietsList, NutritionList} from "@/Components/Recipes/partials/NutritionL
 const RecipeDetails = ({recipe, auth, errors}) => {
     // const [message, setMessage] = useState(externalMessage || '')
     const message = errors.id_from_api && "Juz masz ten przepis w swojej kolekcji";
-    // console.log(recipe.nutrition)
+    // console.log(Recipe.nutrition)
 
     const formatRecipeForSaving = () => {
         return {
@@ -62,7 +62,7 @@ const RecipeDetails = ({recipe, auth, errors}) => {
                 setMessage(response.data.message || 'Recipe has been saved successfully.');
             },
             onError: (errors) => {
-                setMessage('An error occurred while saving the recipe.');
+                setMessage('An error occurred while saving the Recipe.');
             }
         });
     };
