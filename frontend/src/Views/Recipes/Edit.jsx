@@ -2,7 +2,7 @@ import {useState} from "react";
 
 
 const Edit = () => {
-    // dummy dane recipe, normalnie przyjda z BD
+    // dummy dane Recipe, normalnie przyjda z BD
     const recipe = {
         title:'Maselo z mlekiem',
         ingredients: [{name:'maslo', quantity:'2', unit:'gr'},{name:'mleko', quantity:'100', unit:'ml'}],
@@ -15,8 +15,8 @@ const Edit = () => {
     //koniec dummy danych
     const unitOptions = ['ml', 'l', 'kg', 'g', 'szt.', 'łyżka', 'łyżeczka', 'opakowanie', 'szklanka'];
 
-    // const ingredients = JSON.parse(recipe.ingredients);
-    // const cleanInstructions = DOMPurify.sanitize(recipe.instructions);
+    // const ingredients = JSON.parse(Recipe.ingredients);
+    // const cleanInstructions = DOMPurify.sanitize(Recipe.instructions);
 
     const [values, setValues] = useState({
         title: recipe.title,
@@ -84,7 +84,7 @@ const Edit = () => {
             console.log(key, value);
         }
 
-        // Inertia.post(route('recipes.update', {recipe: recipe.id}), formData, {
+        // Inertia.post(route('recipes.update', {Recipe: Recipe.id}), formData, {
         //
         //     headers: {
         //         'Content-Type': 'multipart/form-data',
