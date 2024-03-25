@@ -5,7 +5,7 @@ import { useEffect } from 'react';
  * @param {Object} props - Właściwości przekazywane do komponentu, w tym tytuł strony.
  * @param {string} props.title - Tytuł strony, który ma być ustawiony.
  */
-const SimpleTitle = ({ title }) => {
+const Title = ({ title }) => {
     useEffect(() => {
         // Ustawianie tytułu strony
         if (title) {
@@ -17,4 +17,4 @@ const SimpleTitle = ({ title }) => {
     return null;
 };
 
-export default SimpleTitle;
+export default Title;
