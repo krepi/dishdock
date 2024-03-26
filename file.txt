@@ -4,4 +4,5 @@ design day again ...
 egzamin, dzien bez pracy
 przygotowania do rozmowy cd
 pierwszy dzien kursu i zadanie
+node modules
 
