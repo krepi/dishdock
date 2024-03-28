@@ -5,5 +5,5 @@ egzamin, dzien bez pracy
 przygotowania do rozmowy cd
 pierwszy dzien kursu i zadanie
 node modules
-node day2
+node day3
 
