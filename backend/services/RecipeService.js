@@ -25,7 +25,6 @@ export class RecipeService {
     async getRecipe(id) {
         const searchType = 'information';
         const url = `${this.mainUrl}${id}/${searchType}?apiKey=${this.apiKey}&includeNutrition=true`;
-        console.log(url);
         try {
             const response = await axios.get(url);
             return response.data;
