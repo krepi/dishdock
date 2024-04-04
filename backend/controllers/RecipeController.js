@@ -43,5 +43,4 @@ export class RecipeController {
     }
 }
 
-// Eksportuj instancję RecipeController
 export const recipeController = new RecipeController();
