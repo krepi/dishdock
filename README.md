@@ -1,75 +1,90 @@
 
-# Culinary Application
+# Recipe Management Platform
 
-The Culinary Application is a modern web platform that allows users to explore, search, save, create, and edit culinary recipes. This project is implemented using Laravel, React, and other modern technologies.
+The Recipe Management Platform is an innovative web application that enables users to discover, translate, save, create, and modify culinary recipes from around the globe. This project leverages Express.js and React within Docker containers, alongside PostgreSQL for data management, integrating Spoonacular and Microsoft Translate APIs for an enriched culinary experience.
 
 ## Features
 
-- **Browse Recipes**: Discover new recipes from around the world.
-- **Search Recipes**: Find exactly what you're craving with advanced search filters.
-- **Save Recipes**: Keep your favorite recipes in one place.
-- **Create Recipes**: Add your own recipes and share them with others.
-- **Edit Recipes**: Update and personalize your recipes at any time.
-- **Delete Recipes**: Manage your collection by removing recipes you no longer need.
+- **Explore Recipes**: Navigate through a wide range of global culinary delights.
+- **Translate Recipes**: Utilize Microsoft Translate to understand recipes in your preferred language.
+- **Save Recipes**: Bookmark your favorite recipes for easy access anytime.
+- **Create Recipes**: Contribute your own culinary creations to the community.
+- **Edit Recipes**: Revise and refine your recipes with updated content or translations.
+- **User Accounts**: Sign up and manage your personal recipe collection.
 
 ## Technologies
 
-- **Backend**: Laravel
-- **Frontend**: React with Inertia.js
-- **Styling**: Tailwind CSS
-- **Database**: MySQL
-- **Additional Tools**: Laravel Sail, PHPStorm
+- **Backend**: Node.js with Express.js
+- **Frontend**: React, powered by Vite
+- **Styling**: Styled Components or Tailwind CSS (depending on your choice)
+- **Database**: PostgreSQL
+- **APIs**: Spoonacular for recipes, Microsoft Translate for translations
+- **Containerization**: Docker for isolating the application environment
+- **Development & Deployment**: Docker Compose, possibly with Kubernetes for orchestration
+
+## Project Structure
+
+Below is a high-level overview of the project's directory structure:
+
+```
+/project-root
+    ├── /backend                  # Backend source files
+    │   ├── /controllers          # Controller files
+    │   ├── /models               # Database models
+    │   ├── /routes               # Router files
+    │   └── /services             # Service files for business logic
+    │
+    ├── /frontend                 # Frontend source files
+    │   ├── /public               # Public assets
+    │   ├── /src                  # React source files
+    │   │   ├── /components       # React components
+    │   │   ├── /hooks            # React custom hooks
+    │   │   └── /pages            # React pages
+    │   └── /styles               # CSS or styling files
+    │
+    ├── /db                       # Database scripts and migrations
+    │
+    ├── docker-compose.yml        # Docker compose file
+    ├── Dockerfile                # Dockerfile for backend
+    ├── .env.example              # Example environment variables
+    └── README.md                 # Project documentation
+```
 
 ## Running the Project Locally
 
-To run the project locally, follow these steps:
+Ensure Docker and Docker Compose are installed on your system.
 
-### Without Docker
+### Setting Up
 
-1. Clone the repository to your device.
+1. Clone the project repository.
    ```
    git clone <repository-url>
    ```
-2. Install Composer dependencies.
+2. Navigate into the project directory.
    ```
-   composer install
+   cd project-directory
    ```
-3. Copy `.env.example` to `.env` and set your database and other configurations.
-4. Run the migrations to set up the database schema.
-   ```
-   php artisan migrate
-   ```
-5. Start the development server.
-   ```
-   php artisan serve
-   ```
-6. In a separate terminal, start the frontend environment.
-   ```
-   npm install && npm run dev
-   ```
-
-### With Docker (Laravel Sail)
-
-1. Ensure Docker is installed and running on your system. Download Docker from [the official website](https://www.docker.com/get-started).
-2. Clone the repository if you haven't already.
-   ```
-   git clone <repository-url>
-   ```
-3. Copy `.env.example` to `.env`.
+3. Copy the `.env.example` file to `.env` and adjust the settings to your local environment.
    ```
    cp .env.example .env
    ```
-4. Start the Sail development environment.
-   ```
-   ./vendor/bin/sail up
-   ```
-5. Run the migrations to set up the database schema.
-   ```
-   ./vendor/bin/sail artisan migrate
-   ```
-6. Your application should now be accessible at `http://localhost`.
 
-## Contribution
+### Starting the Application with Docker
 
-We are open to any suggestions and collaboration. If you want to contribute to the development of the project, feel free to create pull requests.
+1. Build and start the containers.
+   ```
+   docker-compose up --build
+   ```
+2. After the build completes, the application should be accessible at `http://localhost:3000` (or another port if you've configured it differently).
+
+### Database Migrations
+
+To set up your PostgreSQL database schema, you may need to run migrations. This can typically be done within the app container:
+```
+docker-compose exec backend npm run migrate
+```
+
+## Contributing
+
+Your contributions are welcome! Whether it's submitting bugs, requesting features, or contributing to the code, we encourage you to get involved. Please feel free to fork the repository, make your changes, and submit a pull request.
 
