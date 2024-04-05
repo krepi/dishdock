@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json()); // Middleware do parsowania JSON
 
-app.use('/api/external', recipeRoutes); // Użycie routera przepisów
+app.use('/api/external', recipeRoutes); // Użycie routera przepisów z api
 
 app.use((req, res) => {
     res.status(404).json({ message: 'Not Found' });
