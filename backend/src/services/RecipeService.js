@@ -18,11 +18,11 @@ export class RecipeService {
     async getRecipe(id) {
         try {
             const recipeData = await this.recipeApiService.fetchRecipe(id);
-            // Tutaj możesz przetwarzać dane, np. dodając dodatkowe informacje
+
             return recipeData;
         } catch (error) {
             console.error('Error in getRecipe:', error);
-            throw error; // Przekazanie błędu do dalszej obsługi
+            throw error;
         }
     }
 }

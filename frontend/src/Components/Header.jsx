@@ -5,6 +5,7 @@ import NavLink from './common/NavLink.jsx';
 import ResponsiveNavLink from './common/ResponsiveNavLink.jsx';
 
 
+
 export default function Header() {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
     return (
