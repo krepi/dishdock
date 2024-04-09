@@ -1,6 +1,6 @@
 import { RecipeService } from '../services/RecipeService.js';
 
-export class RecipeController {
+class RecipeController {
     constructor() {
         this.recipeService = new RecipeService();
     }

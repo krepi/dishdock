@@ -1,6 +1,6 @@
 import { userService } from "../services/UserService.js";
 
-export class UserController {
+ class UserController {
   constructor() {
     this.userService = userService;
   }
@@ -23,3 +23,4 @@ export class UserController {
     }
   };
 }
+export const userController = new UserController();
