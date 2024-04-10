@@ -1,5 +1,4 @@
-
-export class Userservice {
+class Userservice {
 
 getUsers(){
 
@@ -16,3 +15,4 @@ deleteUser(){
 
 
 }
+
