@@ -10,3 +10,4 @@ learning express.js
 express.js
 docker , typescript etc
 DI planning , Postgres will be as a DB (not MYsql)
+last day with no code
