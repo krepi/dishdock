@@ -1,7 +1,7 @@
-import { userService } from "../services/UserService.js";
+// import { userService } from "../services/UserService.js";
 
- class UserController {
-  constructor() {
+ export default class UserController {
+  constructor(userService) {
     this.userService = userService;
   }
 
@@ -23,4 +23,4 @@ import { userService } from "../services/UserService.js";
     }
   };
 }
-export const userController = new UserController();
+// export const userController = new UserController();
