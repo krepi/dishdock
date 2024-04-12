@@ -1,5 +1,5 @@
 import express from 'express';
-import { recipeController } from '../controllers/RecipeController.js';
+import {recipeController} from "../config/diContainer.js";
 
 const router = express.Router();
 

@@ -1,8 +1,8 @@
 import { RecipeService } from '../services/RecipeService.js';
 
 class RecipeController {
-    constructor() {
-        this.recipeService = new RecipeService();
+    constructor(recipeService) {
+        this.recipeService =  recipeService;
     }
 
     getRecipes = async (req, res) => {
@@ -25,6 +25,6 @@ class RecipeController {
     }
 }
 
-export const recipeController = new RecipeController();
+export default RecipeController;
 
 

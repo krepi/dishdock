@@ -2,7 +2,6 @@
 import axios from 'axios';
 import dotenv from 'dotenv'
 dotenv.config();
-// Serwis odpowiedzialny wyłącznie za komunikację z zewnętrznym API przepisów
 export class RecipeApiService {
     constructor() {
         this.apiKey = process.env.API_KEY_SPOON;

@@ -1,4 +1,4 @@
-class Userservice {
+export class Userservice {
 
 getUsers(){
 
