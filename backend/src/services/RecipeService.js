@@ -1,8 +1,10 @@
 import { RecipeApiService } from './RecipeApiService.js';
+import {RecipeRepository} from "../repository/RecipeRepository.js";
 
 export class RecipeService {
     constructor() {
         this.recipeApiService = new RecipeApiService();
+        this.recipeRepository = new RecipeRepository();
     }
 
     async getRecipes() {
