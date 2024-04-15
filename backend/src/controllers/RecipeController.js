@@ -5,19 +5,19 @@ class RecipeController {
         this.recipeService =  recipeService;
     }
 
-    getRecipes = async (req, res) => {
+    getApiRecipes = async (req, res) => {
         try {
-            const recipesData = await this.recipeService.getRecipes();
+            const recipesData = await this.recipeService.getApiRecipes();
             res.status(200).json(recipesData);
         } catch (error) {
             res.status(500).json({ message: 'Internal Server Error' });
         }
     }
 
-    getRecipe = async (req, res) => {
+    getApiRecipe = async (req, res) => {
         try {
             const { id } = req.params;
-            const recipeData = await this.recipeService.getRecipe(id);
+            const recipeData = await this.recipeService.getApiRecipe(id);
             res.status(200).json(recipeData);
         } catch (error) {
             res.status(500).json({ message: 'Internal Server Error' });
