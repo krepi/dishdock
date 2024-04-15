@@ -1,6 +1,4 @@
-// import { userService } from "../services/UserService.js";
-
- export default class UserController {
+export default class UserController {
   constructor(userService) {
     this.userService = userService;
   }
@@ -23,4 +21,3 @@
     }
   };
 }
-// export const userController = new UserController();
