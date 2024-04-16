@@ -18,7 +18,7 @@ export class RecipeRepository {
         if (result.rows.length === 0) {
             throw new Error(`Recipe with ID ${id} not found`);
         }
-        // Mapowanie wyniku z bazy danych na obiekt modelu Recipe
+
         const recipeData = result.rows[0];
         const recipe = new Recipe(recipeData.id, recipeData.name, recipeData.ingredients, recipeData.instructions);
         return recipe;
