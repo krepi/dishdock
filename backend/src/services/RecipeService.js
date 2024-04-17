@@ -1,4 +1,4 @@
-import { RecipeApiService } from './RecipeApiService.js';
+import {RecipeApiService} from './RecipeApiService.js';
 import {RecipeRepository} from "../repository/RecipeRepository.js";
 import {TranslateApiService} from "./TranslateApiService.js";
 
@@ -30,14 +30,23 @@ export class RecipeService {
         }
     }
 
-    async getDbRecipes (){
-        try{
-            return  await this.recipeRepository.getAllRecipes();
+    translateTry = async () => {
+        try {
+            return await this.translateApiService.makeRequest('Ala ma kota', 'pl', 'en');
+        } catch (error) {
+            console.error('error in transalate', error)
+        }
+    }
+
+    async getDbRecipes() {
+        try {
+            return await this.recipeRepository.getAllRecipes();
 
         } catch (error) {
             console.error('Error in getDbrecipes:', error)
         }
     }
+
     async getDbRecipe(id) {
         try {
             return await this.recipeRepository.getRecipeById(id);

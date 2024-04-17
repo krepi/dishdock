@@ -4,7 +4,14 @@ class RecipeController {
     constructor(recipeService) {
         this.recipeService =  recipeService;
     }
-
+translate = async (req,res) =>{
+        try {
+            const data = await this.recipeService.translateTry();
+            res.status(200).json(data);
+        } catch(e){
+            res.status(500).json({ message: 'Internal Server Error' });
+        }
+}
     getApiRecipes = async (req, res) => {
         try {
             const recipesData = await this.recipeService.getApiRecipes();
