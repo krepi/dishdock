@@ -32,7 +32,7 @@ export class RecipeService {
 
     translateTry = async () => {
         try {
-            return await this.translateApiService.makeRequest('Ala ma kota', 'pl', 'en');
+            return await this.translateApiService.makeRequest('Albert ma kokosy w kieszni swojej', 'pl', 'en');
         } catch (error) {
             console.error('error in transalate', error)
         }
