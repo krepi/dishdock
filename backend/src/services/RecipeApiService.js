@@ -2,10 +2,14 @@
 import axios from 'axios';
 import dotenv from 'dotenv'
 dotenv.config();
+const API_KEY_SPOON="822eeba2ab9b4315b3009deebe565d22"
+const API_URL_SPOON="https://api.spoonacular.com/recipes/"
 export class RecipeApiService {
     constructor() {
         this.apiKey = process.env.API_KEY_SPOON;
         this.mainUrl = process.env.API_URL_SPOON;
+    //     this.apiKey = API_KEY_SPOON;
+    //     this.mainUrl = API_URL_SPOON;
     }
 
     async fetchRecipes() {

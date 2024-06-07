@@ -16,19 +16,31 @@ export class RecipeService {
             const dataToTranslate = await Promise.all(promises);
             console.log(dataToTranslate[0][0].translations[0].text);
 
+
             return recipesData;
         } catch (error) {
             console.error('Error in getApiRecipes:', error);
             throw error;
         }
     }
+    // async getApiRecipes(){
+    //     try {
+    //                 const recipesData = await this.recipeApiService.fetchRecipes();
+    //
+    //
+    //                 return recipesData;
+    //             } catch (error) {
+    //                 console.error('Error in getApiRecipes:', error);
+    //                 throw error;
+    //             }
+    // }
 
     getTranslatedApiRecipes = async () => {
         try {
             const recipesData = await this.recipeApiService.fetchRecipes();
             const dataToTranslate = await Promise.all(recipesData.results.map(result => this.translateTry(result.title)))
         } catch (error) {
-            console.error('Error in translated Recip', error)
+            console.error('Error in translated Recipe', error)
         }
     }
 
@@ -48,7 +60,7 @@ export class RecipeService {
         try {
             return await this.translateApiService.makeRequest(text, 'en', 'pl');
         } catch (error) {
-            console.error('error in transalate', error)
+            console.error('error in translate', error)
         }
     }
 
@@ -57,7 +69,7 @@ export class RecipeService {
             return await this.recipeRepository.getAllRecipes();
 
         } catch (error) {
-            console.error('Error in getDbrecipes:', error)
+            console.error('Error in getDbRecipes:', error)
         }
     }
 
