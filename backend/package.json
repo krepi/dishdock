@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon src/app.js",
+    "devStart": "nodemon api/v1/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
