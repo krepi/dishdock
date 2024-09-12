@@ -1,6 +1,6 @@
 import { UserRepository } from "../repository/UserRepository.js";
 
-export  class Userservice {
+export  class UserService {
   
   constructor(){
     this.userRepository = new UserRepository();
@@ -30,6 +30,14 @@ return usersData;
         console.error('Error at createUser:', error)
     }
   }
+  async loginUser(user) {
+      try{
+
+      } catch (error){
+          console.error('Error in loginUser:', error)
+      }
+  }
+
   async deleteUser(id) {
     try{
 
